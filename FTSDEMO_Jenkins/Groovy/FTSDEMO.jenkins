@@ -8,7 +8,7 @@ import java.net.URL
 
 //Compuware Environment to connect, need to be defined in Jenkins via Credentials Dialogs and Plugin Dialogs
 String CES_Token         = "f8401ff1-83fc-4764-ab89-7f68d39ed209"                             //CES Credentials Token
-String HCI_Conn_ID       = "CWCC"                             //Connection String to HCI      
+String HCI_Conn_ID       = "f2a748e1-32a6-4858-a1d8-0180ddab239b"                             //Connection String to HCI      
 String HCI_Token         = "hpogxm0"                             //Credentials for HCI
 
 // ISPW Variables for promote/deploy/generate/regress operations
