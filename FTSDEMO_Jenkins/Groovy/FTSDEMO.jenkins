@@ -181,7 +181,7 @@ node{
             def TTTProjectName = it.path.trim().split("\\\\")[0] 
             def TTTScenarioName = it.name.trim().split("\\.")[0]
 
-            withSonarQubeEnv('CWCC') 
+            withSonarQubeEnv('localhost') 
             {
                 // Run SonarQube Scanner 
                 def SQ_Tests                = " -Dsonar.tests=./${TTTProjectName} -Dsonar.testExecutionReportPaths=TTTSonar/${TTTScenarioName}.xml -Dsonar.coverageReportPaths=Coverage/CodeCoverage.xml"
