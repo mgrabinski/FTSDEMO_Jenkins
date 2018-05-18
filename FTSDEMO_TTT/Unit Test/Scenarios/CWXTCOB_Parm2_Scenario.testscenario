@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?totaltestVersion 18.3.1.v20180327-2102_9?>
+<!--Topaz for Total Test 18.3.1.v20180327-2102_9 May 18, 2018 3:08:14 AM-->
+<testscenario:testscenario xmlns:checkconditions="http://www.compuware.com/model/xml/checkconditions" xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" xmlns:testcase="http://www.compuware.com/model/xml/testcase" xmlns:testscenario="http://www.compuware.com/model/xml/testscenario" alias="" id="Unit%20Test/Scenarios/CWXTCOB_Parm2_Scenario.testscenario">
+  <testscenario:description></testscenario:description>
+  <testscenario:testcases>
+    <testscenario:testcase alias="" csect="CWXTCOB" encoding="1047" id="Unit%20Test/Scenarios/CWXTCOB_Parm2_Scenario.testscenario%23CWXTCOBCase1" target="CWXTCOB">
+      <testcase:description></testcase:description>
+      <testcase:ddio>SALESSUP.GXM1.PRD.DB</testcase:ddio>
+      <testcase:ddiotype>DDIO</testcase:ddiotype>
+      <testcase:targetCaptureCompileTime>1519934483000</testcase:targetCaptureCompileTime>
+      <testcase:interface>../Interfaces/CWXTCOB.interface#Unit%20Test/Interfaces/CWXTCOB.interface</testcase:interface>
+      <testcase:input listructure="../Structures/CWXTCOB_PARMINFO.listructure#Unit%20Test/Structures/CWXTCOB_PARMINFO.listructure">
+        <testcase:data baseType="listructure:structType ../Structures/CWXTCOB_PARMINFO.listructure#PARMINFO" id="arg0.PARMINFO">
+          <properties:properties>
+            <properties:property name="value" type="string">0005F0F0F0F0F0</properties:property>
+          </properties:properties>
+        </testcase:data>
+        <testcase:data baseType="listructure:numberType ../Structures/CWXTCOB_PARMINFO.listructure#PARMINFO.PARM_LTH" id="input.arg0.PARMINFO.PARM_LTH" offset="0"/>
+        <testcase:data baseType="listructure:stringType ../Structures/CWXTCOB_PARMINFO.listructure#PARMINFO.PARM_DATA" id="input.arg0.PARMINFO.PARM_DATA" offset="2"/>
+      </testcase:input>
+      <testcase:checkconditions>
+        <checkconditions:complexCheckcondition message="Complex check condition failed" name="Complex check condition"/>
+      </testcase:checkconditions>
+      <testcase:stubs>
+        <testcase:stub>../Stubs/CWXTCOB_CWXTDATE_01.stub#Unit%20Test/Stubs/CWXTCOB_CWXTDATE_01.stub</testcase:stub>
+        <testcase:stub>../Stubs/CWXTCOB_EMPFILE_READ_01.stub#Unit%20Test/Stubs/CWXTCOB_EMPFILE_READ_01.stub</testcase:stub>
+      </testcase:stubs>
+    </testscenario:testcase>
+  </testscenario:testcases>
+</testscenario:testscenario>
