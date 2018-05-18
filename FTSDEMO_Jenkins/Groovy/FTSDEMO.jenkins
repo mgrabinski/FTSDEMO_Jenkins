@@ -173,7 +173,7 @@ node{
     stage("SonarQube analysis") 
     {
         // Requires SonarQube Scanner 2.8+
-        def scannerHome = tool 'Scanner';
+        def scannerHome = tool 'SonarQubeScanner';
 
         TTTListOfScenarios.each
         {
