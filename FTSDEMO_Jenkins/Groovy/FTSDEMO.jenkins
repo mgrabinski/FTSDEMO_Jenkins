@@ -197,7 +197,7 @@ node{
                 println "SQ_Cobol_conf: " + SQ_Cobol_conf
                 
 
-                bat "${scannerHome}\bin\sonar-scanner" + SQ_Tests + SQ_ProjectKey + SQ_Source + SQ_Copybook + SQ_Cobol_conf
+                bat "${scannerHome}/bin/sonar-scanner" + SQ_Tests + SQ_ProjectKey + SQ_Source + SQ_Copybook + SQ_Cobol_conf
             }
         }
     }
