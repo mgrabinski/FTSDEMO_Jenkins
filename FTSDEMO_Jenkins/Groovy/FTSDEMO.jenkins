@@ -190,15 +190,14 @@ node{
                 def SQ_Copybook             = " -Dsonar.cobol.copy.directories=${ISPW_Application}\\${MF_Source}"
                 def SQ_Cobol_conf           = " -Dsonar.cobol.file.suffixes=cbl,testsuite,testscenario,stub -Dsonar.cobol.copy.suffixes=cpy -Dsonar.sourceEncoding=UTF-8"
 
-                println "*** DEBUG ***"
-                println "SQTests " + SQ_Tests
-                println "SQ_ProjectKey " + SQ_ProjectKey
-                println "SQ_Source " + SQ_Source
-                println "SQ_Copybook " + SQ_Copybook
-                println "SQ_Cobol_conf " + SQ_Cobol_conf
-                println "*** DEBUG ***"
+                println "SQTests: " + SQ_Tests
+                println "SQ_ProjectKey: " + SQ_ProjectKey
+                println "SQ_Source: " + SQ_Source
+                println "SQ_Copybook: " + SQ_Copybook
+                println "SQ_Cobol_conf: " + SQ_Cobol_conf
+                
 
-                bat "${scannerHome}/bin/sonar-scanner" + SQ_Tests + SQ_ProjectKey + SQ_Source + SQ_Copybook + SQ_Cobol_conf
+                bat "${scannerHome}\bin\sonar-scanner" + SQ_Tests + SQ_ProjectKey + SQ_Source + SQ_Copybook + SQ_Cobol_conf
             }
         }
     }
