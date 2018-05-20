@@ -35,7 +35,7 @@ String SQ_Project           = "Ralph_Madrid"
 
 // XL Release template to trigger / XL Release user to connect with / The
 String XLR_Template         = "A Release from Jenkins"  // XL Release template to invoke at the end of the Jenkins workflow
-String XLR_User             = "xebialabs"               // XL Release user ID. Configured in Jenkins/Manage Jenkins/Configure System/XL Release credentials
+String XLR_User             = "HDDRXM0"               // XL Release user ID. Configured in Jenkins/Manage Jenkins/Configure System/XL Release credentials
 String XLR_Release          = "GENA Q2"
 
 // One node with several stages => All variables are local to the node and available to all stages
