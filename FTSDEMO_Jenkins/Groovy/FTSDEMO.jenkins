@@ -55,7 +55,8 @@ node{
     {
         checkout(changelog: false, poll: false, 
             scm: [$class: 'IspwConfiguration', 
-                componentType: 'COB, COPY', 
+                componentName: 'CWXT*',  
+                componentType: 'COB', 
                 connectionId: "${HCI_Conn_ID}", 
                 credentialsId: "${HCI_Token}", 
                 folderName: '', 
