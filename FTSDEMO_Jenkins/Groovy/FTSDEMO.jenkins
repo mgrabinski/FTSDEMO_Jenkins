@@ -6,14 +6,18 @@ import groovy.json.JsonBuilder
 import groovy.json.JsonOutput
 import java.net.URL
 
+@param ISPW_Container
+
 //Compuware Environment to connect, need to be defined in Jenkins via Credentials Dialogs and Plugin Dialogs
 String CES_Token         = "f8401ff1-83fc-4764-ab89-7f68d39ed209"                             //CES Credentials Token
 String HCI_Conn_ID       = "f2a748e1-32a6-4858-a1d8-0180ddab239b"                             //Connection String to HCI      
 String HCI_Token         = "HPOGXM0"                             //Credentials for HCI
 
+
 // ISPW Variables for promote/deploy/generate/regress operations
 String ISPW_RuntimeConfig   = "ISPW"
 String ISPW_Target_Level    = "STG"
+String ISPW_ContainerType    = "0"
 
 // Git Parameters
 String Git_User         = "mgrabinski"
@@ -53,7 +57,8 @@ node{
 
     stage("Download Source Code")
     {
-        checkout(changelog: false, poll: false, 
+        /*
+            checkout(changelog: false, poll: false, 
             scm: [$class: 'IspwConfiguration', 
                 componentName: 'CWXT*',  
                 componentType: 'COB', 
@@ -65,6 +70,38 @@ node{
                 serverConfig: "${ISPW_RuntimeConfig}", 
                 serverLevel: "${ISPW_Src_Level}", 
                 serverStream: "${ISPW_Stream}"])
+         */
+         checkout(changelog: false, poll: false, 
+            scm: [$class: 'IspwContainerConfiguration', 
+           //     componentName:        'CWXT*',  
+                componentType:          'COB', 
+                connectionId:           "${HCI_Conn_ID}", 
+                credentialsId:          "${HCI_Token}", 
+                folderName:             '', 
+                levelOption:            '1', 
+                serverApplication:      "${ISPW_Application}", 
+                serverConfig:           "${ISPW_RuntimeConfig}", 
+                serverLevel:            "${ISPW_Src_Level}", 
+                serverStream:           "${ISPW_Stream}"
+                containerName:          "${ISPW_Container}",   
+                containerType:          "${ISPW_ontainerType}",     // 0-Assignment 1-Release 2-Set
+                ispwDownloadAll:    true,                              // false will not download files that exist in the workspace and haven't previous changed
+                serverConfig:       '',                                 // ISPW runtime config.  if blank ISPW will use the default runtime config
+                serverLevel:        ''                                  // level to download the components from     
+            ])
+       /*     
+            checkout([
+            $class:             'IspwContainerConfiguration', 
+            componentType:      'COB',                                 // optional filter for component types in ISPW
+            connectionId:       "${HCI_Conn_ID}",     
+            credentialsId:      "${HCI_Token}",      
+            containerName:      "${ispwContainer}",   
+            containerType:      "${ispwContainerType}",     // 0-Assignment 1-Release 2-Set
+            ispwDownloadAll:    true,                              // false will not download files that exist in the workspace and haven't previous changed
+            serverConfig:       '',                                 // ISPW runtime config.  if blank ISPW will use the default runtime config
+            serverLevel:        ''                                  // level to download the components from
+        ])
+        */
     }
 
     println "*******************"
