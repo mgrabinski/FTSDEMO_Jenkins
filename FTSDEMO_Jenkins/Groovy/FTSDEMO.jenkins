@@ -6,8 +6,6 @@ import groovy.json.JsonBuilder
 import groovy.json.JsonOutput
 import java.net.URL
 
-@param ISPW_Container
-
 //Compuware Environment to connect, need to be defined in Jenkins via Credentials Dialogs and Plugin Dialogs
 String CES_Token         = "f8401ff1-83fc-4764-ab89-7f68d39ed209"                             //CES Credentials Token
 String HCI_Conn_ID       = "f2a748e1-32a6-4858-a1d8-0180ddab239b"                             //Connection String to HCI      
@@ -18,6 +16,7 @@ String HCI_Token         = "HPOGXM0"                             //Credentials f
 String ISPW_RuntimeConfig   = "ISPW"
 String ISPW_Target_Level    = "STG"
 String ISPW_ContainerType    = "0"
+String ISPW_Container        = "GXM1000006"
 
 // Git Parameters
 String Git_User         = "mgrabinski"
