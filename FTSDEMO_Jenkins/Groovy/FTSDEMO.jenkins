@@ -82,7 +82,7 @@ node{
                 serverApplication:      "${ISPW_Application}", 
                 serverConfig:           "${ISPW_RuntimeConfig}", 
                 serverLevel:            "${ISPW_Src_Level}", 
-                serverStream:           "${ISPW_Stream}"
+                serverStream:           "${ISPW_Stream}",
                 containerName:          "${ISPW_Container}",   
                 containerType:          "${ISPW_ontainerType}",     // 0-Assignment 1-Release 2-Set
                 ispwDownloadAll:    true,                              // false will not download files that exist in the workspace and haven't previous changed
