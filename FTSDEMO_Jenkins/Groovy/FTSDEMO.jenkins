@@ -184,7 +184,7 @@ node{
         // Process the Total Test result files into Jenkins
         junit allowEmptyResults: true, keepLongStdio: true, testResults: "TTTUnit/*.xml"
     }
-
+/*
     // Download CoCo Results from Test Runs
     println "****************"
     println "Gather CoCo Data"
@@ -238,7 +238,7 @@ node{
             }
         }
     }
-
+*/
     // Check Quality Gate from SonarQube Scanner
     println "******************"
     println "Check Quality Gate"
